@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.inner {max-width: 1250px; width: 100%; height: 100%; margin: 0 auto;}
+
+/* --------------------------------- header css --------------------------------- */
+.header {z-index: 1000; position: absolute;top: 0; left: 0; width: 100%; transition: all 0.3s;}
+
+.headerNotice {display: flex; align-items: center; height: 60px;}
+.headerNotice .notioceIcon {margin-right: 20px;}
+.headerNotice .notioceText {font-size: 14px; font-weight: 300;}
+
+.headerBody {display: flex; align-items: center; width: 100%; height: 80px;}
+
+.headerBody.fixed {position: fixed; top: 0; left: 0; padding: 0 208px;background-color: rgba(0, 0, 0, 0.2); animation:scrollU 0.5s ease both; backdrop-filter: blur(5px);}
+.headerBody.fixed:not(.scroll) {animation:scrollD 0.5s ease both;}
+
+.headerBody .logo a {display: inline-block; font-size: 34px; font-weight: bold;}
+.headerBody .gnb {display: flex; align-items: center; margin: 0 30px 0 auto;}
+.headerBody .gnb ul {display: flex; align-items: center;} 
+.headerBody .gnb ul li {font-size: 14px; font-weight: 500; color: #fff;}
+.headerBody .gnb ul li a {padding: 10px 30px;}
+
+.headerBody .alert {position: relative; font-size: 26px;}
+.headerBody .alert.on::after {content: ''; position: absolute; top: -3px; right: -2px; width: 10px; height: 10px; border-radius: 50%; background-color: #01B3FF;}
+/* --------------------------------- //header css --------------------------------- */
+
+#content {padding-top: 140px;}
+
+/* --------------------------------- footer css --------------------------------- */
+.footer {height: 260px;padding-top: 120px;}
+
+.footer .footer-inner {width: 1280px; margin: 0 auto;}
+
+.footer .logo {font-size: 34px;}
+
+.footer .footer-content {display: flex; align-items: center; margin-top: 20px;}
+.footer .copyright {font-size: 14px; font-weight: 300; color: #fff;}
+
+/* .footer .social-list {display: flex; gap: 10px; margin-left: 50px;} */
+/* --------------------------------- //footer css --------------------------------- */
+
+
+@keyframes scrollD {
+    0% {transform: translateY(0);}
+    100% {transform:  translateY(-100%);}
+}
+
+@keyframes scrollU {
+    0% {transform: translateY(-100%);}
+    100% {transform:  translateY(0);}
+}

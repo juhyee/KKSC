@@ -1,0 +1,24 @@
+#notice.section .section_inner {padding: 100px 0; text-align: center;}
+#notice.section .notice_title {color: #fff;}
+#notice.section .notice_title h3 {font-size: 45px; font-weight: 900;}
+#notice.section .notice_title p {margin-top: 25px; font-size: 16px;}
+
+#notice.section .notice_list {display: inline-flex; justify-content: center; margin: 50px auto 0; padding: 20px 50px; border-radius: 30px; background-color: rgba(255, 255, 255, 0.2);}
+#notice.section .notice_list li {padding: 0 30px; border-left: 1px solid #fff; font-size: 15px;}
+#notice.section .notice_list li:first-child {border-left: 0 none;}
+
+#notice.section .notice_tbl {width: 800px; margin: 60px auto 0; color: #fff;}
+#notice.section .notice_tbl .tbl_title {font-size: 20px; text-align: left;}
+#notice.section .notice_tbl .tbl {width: 800px; margin-top: 30px; border-top: 3px solid #fff; border-bottom: 2px solid #fff; box-sizing: border-box;}
+#notice.section .notice_tbl thead {border-bottom: 2px solid rgba(255, 255, 255, 0.1);}
+#notice.section .notice_tbl th,
+#notice.section .notice_tbl td {padding: 16px 0;}
+#notice.section .notice_tbl tbody {font-size: 15px;}
+#notice.section .notice_tbl td.tbl_num.notice span {display: inline-block; padding: 6px 16px; border-radius: 16px; background-color: rgba(255, 255, 255, 0.1); font-size: 14px;}
+#notice.section .notice_tbl td.tbl_detail {width: 500px;}
+#notice.section .notice_tbl td.tbl_detail p {width: 500px;   overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
+
+#notice.section .notice_tbl .tbl_pagination {margin: 30px auto 0;}
+#notice.section .notice_tbl .tbl_pagination ul {display: flex; justify-content: center;}
+#notice.section .notice_tbl .tbl_pagination ul li a {margin: 15px; font-size: 12px; color: #fff; opacity: 0.3;}
+#notice.section .notice_tbl .tbl_pagination ul li.active a {font-size: 15px; opacity: 1;}
