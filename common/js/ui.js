@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     scorllHeader();
-    ancEvt();
+    alertEvt();
   });
   
   function scorllHeader(){
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   
   function ancEvt(){
-    const links = document.querySelectorAll('.gnb a'); 
+    const links = document.querySelectorAll('.alertBtn'); 
     
     links.forEach(function(link) {
       link.addEventListener("click", function(e) {
@@ -87,3 +87,26 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     });
   }
+
+  function alertEvt() {
+    let popupState = false;
+    const alertBtn = document.querySelector('.alertBtn'); 
+    const alertPopup = document.querySelector('.alertPopup');
+      
+    alertBtn.addEventListener('click', function(e){
+      alertPopup.classList.add('on');
+      e.stopPropagation()
+       return popupState = true; 
+    });
+  
+    
+    
+    document.body.addEventListener('click', function(e){
+      if(popupState == true){
+        if (!alertPopup.contains(e.target)){
+          alertPopup.classList.remove('on');
+          return popupState = false;
+          }
+        }
+      });
+    }

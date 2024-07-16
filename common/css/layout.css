@@ -5,12 +5,13 @@
 /* --------------------------------- header css --------------------------------- */
 .header {z-index: 1000; position: absolute;top: 0; left: 0; width: 100%; transition: all 0.3s;}
 
-.headerNotice {display: flex; align-items: center; height: 60px;}
+.headerNotice {display: flex; align-items: center; height: 60px; border-bottom: 1px solid rgba(255, 255, 255, 0.2);}
 .headerNotice .notioceIcon {margin-right: 20px;}
-.headerNotice .notioceText {font-size: 14px; font-weight: 300;}
+
+.headerNotice .noticeSwiper {width: 100%;height: 100%; cursor: default;}
+.headerNotice .noticeSwiper .swiper-slide {display: flex;align-items: center; font-size: 13px;}
 
 .headerBody {display: flex; align-items: center; width: 100%; height: 80px;}
-
 .headerBody.fixed {position: fixed; top: 0; left: 0; padding: 0 208px;background-color: rgba(0, 0, 0, 0.2); animation:scrollU 0.5s ease both; backdrop-filter: blur(5px);}
 .headerBody.fixed:not(.scroll) {animation:scrollD 0.5s ease both;}
 
@@ -20,16 +21,45 @@
 .headerBody .gnb ul li {font-size: 14px; font-weight: 500; color: #fff;}
 .headerBody .gnb ul li a {padding: 10px 30px;}
 
-.headerBody .alert {position: relative; font-size: 26px;}
-.headerBody .alert.on::after {content: ''; position: absolute; top: -3px; right: -2px; width: 10px; height: 10px; border-radius: 50%; background-color: #01B3FF;}
+.headerBody .alert {position: relative; display: flex; align-items: center; font-size: 26px; width: 27px; height: 100%;}
+.headerBody .alert.on::after {content: ''; position: absolute; top: 22px; right: 3px; width: 10px; height: 10px; border-radius: 50%; background-color: #01B3FF;}
+
+.alertPopup {display: none; overflow-y: auto; z-index: 99;position: absolute; top: 70px; left: 50%; width: 300px; max-height: 230px; padding: 0 15px 0 25px; background-color: #131313; border: 10px solid #131313; border-radius: 16px; transform: translate(-50%, 0);}
+.alertPopup.on {display: block;}
+.alertPopup .alertItem { padding: 10px 0; border-bottom: 1px solid #353535; color: rgba(255, 255, 255, 0.5);}
+.alertPopup .alertItem.notRead {color: #fff;}
+.alertPopup .alertItem:last-of-type {border-bottom: 0 none;}
+.alertPopup .alertItem .alert-title {position: relative;font-size: 14px; font-weight: 700;}
+.alertPopup .alertItem.notRead .alert-title::after {content: ''; position: absolute; top: 0px; right: -8px; width: 6px; height: 6px; border-radius: 50%; background-color: #01B3FF;}
+.alertPopup .alertItem .alert-desc { width: calc(100% - 10px); overflow: hidden; text-overflow: ellipsis;white-space: nowrap;margin-top: 8px; font-size: 12px; line-height: 13px; font-weight: 200;}
+
+.alertPopup::-webkit-scrollbar {width: 4px;}
+.alertPopup::-webkit-scrollbar-thumb {background: #000;
+border-radius: 10px;} 
+.alertPopup::-webkit-scrollbar-track {background: #333; border-radius: 10px;}
 /* --------------------------------- //header css --------------------------------- */
 
 #content {padding-top: 140px;}
 
-/* --------------------------------- footer css --------------------------------- */
-.footer {height: 260px;padding-top: 120px;}
+.board .board-inner {width: 800px; margin: auto; padding: 100px 0; text-align: center;}
+.board .board-title {color: #fff;}
+.board .board-title h3 {font-size: 45px; font-weight: 900;}
+.board .board-title p {margin-top: 25px; font-size: 16px;}
 
-.footer .footer-inner {width: 1280px; margin: 0 auto;}
+
+.board .board-list {display: inline-flex; justify-content: center; margin: 50px auto 0; padding: 20px 50px; border-radius: 30px; background-color: rgba(255, 255, 255, 0.2);}
+.board .board-list li {padding: 0 30px; border-left: 1px solid #fff; font-size: 15px;}
+.board .board-list li:first-child {border-left: 0 none;}
+
+.board .tbl-pagination {margin: 30px auto 0;}
+.board .tbl-pagination ul {display: flex; justify-content: center;}
+.board .tbl-pagination ul li a {margin: 15px; font-size: 12px; color: #fff; opacity: 0.3;}
+.board .tbl-pagination ul li.on a {font-size: 15px; opacity: 1;}
+
+
+/* --------------------------------- footer css --------------------------------- */
+.footer {padding-bottom: 60px;}
+
 
 .footer .logo {font-size: 34px;}
 
