@@ -38,3 +38,4 @@ body {word-break:keep-all;line-height:1;font-family:"Pretendard, Arial, sans-ser
 
 .icon {display: inline-block; margin-top: -1px;}
 
+.btn {display: inline-block; padding: 12px 20px 10px; border-radius: 40px; border: 1px solid #01B3FF; font-size: 14px; color: #01B3FF;}

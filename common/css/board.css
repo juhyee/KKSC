@@ -1,4 +1,7 @@
+@charset "utf-8";
+
 /* 게시판, 공지사항 용 - table */
+.board .write-btn {float: right; margin-bottom: 20px;}
 .board .board-tbl {width: 800px; margin: 100px auto 0; }
 .board .board-tbl .tbl-title {font-size: 20px; text-align: left;}
 .board .board-tbl .tbl {width: 800px; margin-top: 15px; border-top: 3px solid #fff; border-bottom: 2px solid #fff; box-sizing: border-box;}
@@ -13,10 +16,11 @@
 /* 게시판, 공지사항 용 - table */
 
 /* 포트폴리오 용 - card */
-.board-card {position: relative;display: flex;flex-wrap: wrap; margin: 100px auto 0; }
+.board-card {margin: 100px auto 0;}
+.board-card .card {position: relative;display: flex;flex-wrap: wrap; }
 /* 한줄에 3개 타입 */
-.board-card.row-3 {width: calc(100% + 20px);margin-left: -20px;}
-.board-card.row-3 .cardItem {width: calc((100% / 3) - 20px);margin-left: 20px;}
+.board-card .card.row-3 {width: calc(100% + 20px);margin-left: -20px;}
+.board-card .card.row-3 .cardItem {width: calc((100% / 3) - 20px);margin-left: 20px;}
 /* 한줄에 3개 타입 */
 .board-card .itemTitle {position: absolute;top: 0;left: 0;padding-left: 20px;font-size: 16px;font-weight: 600;color: #4E4F51;}
 .cardItem {overflow: hidden;position: relative;height: 380px;max-height: 380px;border-radius: 26px; border: 2px solid rgba(255, 255, 255, 0.2);}
@@ -29,5 +33,5 @@
 .cardItem .card-detail .card-title {margin-top: 11px;font-size: 18px;font-weight: 600;}
 .cardItem .card-detail .card-desc {position: relative;margin-top: 15px;font-size: 12px;line-height: 18px;word-break: break-all; display: -webkit-box;word-wrap: break-word;-webkit-line-clamp: 3;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden; opacity: 0.6;}
 
-.cardItem .btn-view {position: absolute; left: 20px; bottom: 24px; padding: 10px 20px 10px; border-radius: 32px; border: 1px solid #01B3FF; font-size: 12px; color: #01B3FF;}
+.cardItem .btn-view {position: absolute; left: 20px; bottom: 24px; padding: 10px 20px 10px;}
 /* 포트폴리오 용 - card */

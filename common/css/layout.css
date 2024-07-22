@@ -46,7 +46,6 @@ border-radius: 10px;}
 .board .board-title h3 {font-size: 45px; font-weight: 900;}
 .board .board-title p {margin-top: 25px; font-size: 16px;}
 
-
 .board .board-list {display: inline-flex; justify-content: center; margin: 50px auto 0; padding: 20px 50px; border-radius: 30px; background-color: rgba(255, 255, 255, 0.2);}
 .board .board-list li {padding: 0 30px; border-left: 1px solid #fff; font-size: 15px;}
 .board .board-list li:first-child {border-left: 0 none;}
